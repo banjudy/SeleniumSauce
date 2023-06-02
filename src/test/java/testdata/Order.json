@@ -1,0 +1,15 @@
+[ 
+
+{
+	"username" : "standard_user",
+	"password" : "secret_sauce",
+	"wantedProduct" : "Sauce Labs Bike Light"
+},
+
+{
+	"username" : "locked_out_user",
+	"password" : "secret_sauce",
+	"wantedProduct" : "Sauce Labs Onesie"
+}
+
+]
