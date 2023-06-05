@@ -65,9 +65,4 @@ public class SauceStandaloneTest {
 		
 	}
 	
-	/*private static String getProductName(WebElement p) {
-		String productName = p.findElement(By.cssSelector("div[class='inventory_item_name']")).getText();
-		return productName;
-	}*/
-
 }

@@ -1,4 +1,4 @@
-package pagobjects;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,11 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import abstractcomponents.AbstractComponents;
 
-public class LangingPage extends AbstractComponents {
+public class LandingPage extends AbstractComponents {
 	
 	WebDriver driver;
 	
-	public LangingPage(WebDriver driver) {
+	public LandingPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -30,8 +30,8 @@ public class LangingPage extends AbstractComponents {
 	WebElement errorLogin;
 	
 	public ProductCatalog loginApplication(String name, String password) {
-		usernameElement.sendKeys("standard_user");
-		passwordElement.sendKeys("secret_sauce");
+		usernameElement.sendKeys(name);
+		passwordElement.sendKeys(password);
 		loginElement.click();
 		ProductCatalog productCatalog = new ProductCatalog(driver);
 		return productCatalog;

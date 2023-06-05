@@ -1,4 +1,4 @@
-package pagobjects;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,10 +28,10 @@ public class CheckOutPage extends AbstractComponents {
 	@FindBy(css="input[class*='submit-button']")
 	WebElement submitOrder;
 	
-	public void enterDetails() {
-		firstName.sendKeys("Judit");
-		lastName.sendKeys("Ban");
-		zipCode.sendKeys("2222");
+	public void enterDetails(String first, String last, String postal) {
+		firstName.sendKeys(first);
+		lastName.sendKeys(last);
+		zipCode.sendKeys(postal);
 	}
 	
 	public ConfirmationPage checkOut() {

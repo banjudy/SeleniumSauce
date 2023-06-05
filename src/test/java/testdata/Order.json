@@ -7,7 +7,7 @@
 },
 
 {
-	"username" : "locked_out_user",
+	"username" : "problem_user",
 	"password" : "secret_sauce",
 	"wantedProduct" : "Sauce Labs Onesie"
 }

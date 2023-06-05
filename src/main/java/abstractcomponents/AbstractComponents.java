@@ -12,7 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pagobjects.CartPage;
+import pageObjects.CartPage;
 
 
 public class AbstractComponents {
@@ -22,9 +22,6 @@ public class AbstractComponents {
 	@FindBy(css="a[class='shopping_cart_link']")
 	WebElement cart;
 	
-	//@FindBy(css="") //TODO
-	//WebElement orderHeader;
-
 	public AbstractComponents(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -50,25 +47,7 @@ public class AbstractComponents {
 		CartPage cart = new CartPage(driver);
 		return cart;
 	}
-	
-	/*public OrderPage clickOnOrders() {
-		orderHeader.click();
-		OrderPage orderHeader = new OrderPage(driver);
-		return orderHeader;
 		
-	}*/
-	
-	/*public void scrollDown() throws InterruptedException {
-		JavascriptExecutor js = (JavascriptExecutor)driver; 		//cast!
-		js.executeScript("window.scrollBy(0,500)");	
-		Thread.sleep(5000);
-	}
-	
-	public void enterValue(WebElement ele, String value) {
-		Actions a = new Actions(driver);
-		a.moveToElement(ele).click().sendKeys(value).build().perform();
-	}*/
-	
 	public void closeDriver() {
 		driver.close();
 	}

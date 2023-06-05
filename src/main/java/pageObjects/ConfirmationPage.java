@@ -1,4 +1,4 @@
-package pagobjects;
+package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,7 +28,11 @@ public class ConfirmationPage extends AbstractComponents{
 	}
 	
 	public boolean isSuccessful() {
-		return confirmationText.equals("Thank you for your order!");
+		return confirmationText.getText().equals("Thank you for your order!");
+	}
+	
+	public String getSuccessMessage() {
+		return confirmationText.getText();
 	}
 
 }
