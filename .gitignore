@@ -135,6 +135,10 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+# TestNG
+test-output
+test-output/
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
